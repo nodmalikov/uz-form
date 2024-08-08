@@ -77,8 +77,7 @@ img {
 }
 
 *:focus {
-    outline: 2px dotted var(--purple-color);
-    outline-offset: 2px;
+    outline: transparent;
 }
 
 /* CONTAINER */
@@ -286,10 +285,6 @@ img {
     
     .signup-form-field:not(:last-child) {
         margin-bottom: 10px;
-    }
-    
-    .signup-form *:focus {
-        outline: transparent;
     }
     
     .signup-form-fields {
