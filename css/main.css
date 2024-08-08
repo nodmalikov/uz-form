@@ -1,0 +1,326 @@
+/* CUSTOM-PROPS */
+:root {
+    --background-color: #e7e7e7;
+    --text-color: #000;
+    --input-color: #555;
+    --green-color: #4dc490;
+    --purple-color: #655af2;
+    --danger-color: #f03535;
+}
+
+/* GOOGLE-FONTS */
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Bold.woff2") format("woff2"),
+    url("../fonts/Poppins-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-SemiBold.woff2") format("woff2"),
+    url("../fonts/Poppins-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Regular.woff2") format("woff2"),
+    url("../fonts/Poppins-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Medium.woff2") format("woff2"),
+    url("../fonts/Poppins-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* GLOBAL */
+html {
+    height: 100%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", "Arial", sans-serif;
+    background-color: var(--background-color);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+*:focus {
+    outline: 2px dotted var(--purple-color);
+    outline-offset: 2px;
+}
+
+/* CONTAINER */
+.container {
+    width: 100%;
+    max-width: 1192px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* MAIN-CONTENT */
+.main-content {
+    flex-grow: 1;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+
+/* INTRO-PAGEK */
+.intro-page {
+    display: flex;
+    gap: 12px;
+}
+
+/* INTRO-HERO */
+.intro-hero {
+    width: 100%;
+    max-width: 570px;
+    border-radius: 20px;
+    overflow: hidden;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    background-color: #222;
+    background-image: url("../img/bg-img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.intro-hero-main {
+    padding: 55px 60px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.intro-hero-badge {
+    padding: 5px 15px;
+    border-radius: 42px;
+    border: 1px solid #fff;
+    margin-bottom: 60px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: normal;
+}
+
+.intro-hero-heading {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 46px;
+}
+
+.intro-hero-pragraph {
+    margin: 0;
+    line-height: 26px;
+}
+
+.intro-hero-bottom {
+    padding: 28px;
+    font-size: 19px;
+    text-align: center;
+    background-color: var(--green-color);
+}
+
+/* SIGNUP-FORM */
+.signup-form {
+    width: 100%;
+    max-width: 570px;
+    padding: 55px 60px 40px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.signup-form-heading {
+    margin-top: 0;
+    margin-bottom: 65px;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 42px;
+    color: var(--text-color);
+}
+
+.signup-form-fields {
+    margin-bottom: 65px;
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-form-field {
+    padding-top: 15px;
+    padding-bottom: 14px;
+    border: 0;
+    border-bottom: 1px solid var(--input-color);
+    color: var(--input-color);
+}
+
+.signup-form-field:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.signup-form-field:focus {
+    border-bottom-color: var(--text-color);
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.signup-form-button {
+    width: 100%;
+    border: 0;
+    padding: 20px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    display: block;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    background-color: var(--purple-color);
+}
+
+.signup-form-notice {
+    font-size: 11px;
+    line-height: 15px;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.singup-form-link {
+    color: var(--danger-color);
+}
+
+/* MEDIA-QUERIES */
+@media only screen and (max-width: 1000px) {
+    .intro-page {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .intro-hero-heading,
+    .signup-form-heading {
+        font-size: 28px;
+        line-height: 34px;
+    }
+    
+    .intro-hero-main,
+    .signup-form {
+        padding: 30px;
+    }
+    
+    .signup-form-heading {
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .intro-hero-heading,
+    .signup-form-heading {
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 20px;
+    }
+    
+    .intro-hero-heading {
+        margin-bottom: 15px;
+    }
+    
+    .intro-hero-main,
+    .signup-form {
+        padding: 20px;
+    }
+    
+    .intro-hero-badge {
+        font-size: 12px;
+        margin-bottom: 50px;
+    }
+    
+    .intro-hero-pragraph {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    
+    .intro-hero-bottom {
+        font-size: 12px;
+        padding: 20px;
+    }
+    
+    .signup-form-field:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    
+    .signup-form *:focus {
+        outline: transparent;
+    }
+    
+    .signup-form-fields {
+        margin-bottom: 40px;
+    }
+    
+    .signup-form-notice {
+        font-size: 10px;
+        line-height: 13px;
+    }
+    
+    .signup-form-button {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .intro-hero-heading,
+    .signup-form-heading {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .intro-hero-heading {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    
+    .intro-hero-pragraph {
+        font-size: 12px;
+    }
+}
